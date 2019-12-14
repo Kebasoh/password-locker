@@ -8,3 +8,6 @@ def __init__(account_name,user_name,password,email):
 def save_user(user):
    
     user.save_user()
+def del_user(user):
+     
+    user.delete_user()
