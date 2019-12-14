@@ -11,3 +11,6 @@ def save_user(user):
 def del_user(user):
      
     user.delete_user()
+def find_user(user_name):
+    
+    return User.find_by_user_name(user_name)
