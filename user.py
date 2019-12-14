@@ -1,3 +1,4 @@
+import pyperclip
 class User:
     
     user_list = []
