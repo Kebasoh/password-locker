@@ -75,7 +75,6 @@ class TestUser(unittest.TestCase):
 
         self.new_user.save_user()
         User.copy_password("steve254")
-
         self.assertEqual(self.new_user.password,pyperclip.paste())
 
 

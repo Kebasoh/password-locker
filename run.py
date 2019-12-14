@@ -14,3 +14,10 @@ def del_user(user):
 def find_user(user_name):
     
     return User.find_by_user_name(user_name)
+
+def check_existing_user(user_name):
+    
+    return User.user_exist(user_name)
+def display_user():
+  
+    return User.display_user()

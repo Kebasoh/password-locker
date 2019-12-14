@@ -33,7 +33,7 @@ class User:
        
         for user in cls.user_list:
             if user.user_name == user_name:
-                    return True
+                    return user
 
         return False
     
