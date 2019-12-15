@@ -24,12 +24,12 @@ class User:
 
         User.user_list.remove(self)
     @classmethod
-    def find_by_username(cls,useename):
+    def find_by_username(cls,username):
        
 
         for user in cls.user_list:
             if user.username == username:
-                return user
+                return username
     @classmethod
     def user_exist(cls,username):
        
@@ -45,6 +45,6 @@ class User:
     
     @classmethod
     def copy_password(cls,password):
-        user_found = User.find_by_username(username)
+        user_found = User.find_by_password(username)
         pyperclip.copy(user_found.password)
     
