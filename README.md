@@ -3,7 +3,7 @@
 ## Project Author
 - Kebaso Steve Ongati
 ## Project Description
-
+- This is a terminal working project where one us to store his/her account and password,he/she can also create an      account
 ## Setup Instructions
 - clone this repository
 
