@@ -25,9 +25,9 @@ def copy_password(username):
     
     return User.copy_password(username)
 def main():
-    print('Hello! Welcome to your user list. What is your name?')
+    print('Hello! Can you please generate your credentials? Whats your name?')
     user_name = input()
-    print(f"Hello {user_name}. What would you like to do?")
+    print(f"Hello {user_name}. Generate your credentials")
     print('\n')
     while True:
         print("Use these short codes: cu - create a new user, du - display user, del - delete user, cp - copy password, fp - find a password, ex - exit the user list ")
@@ -52,7 +52,7 @@ def main():
                 print('Here is a list of all your users')
                 print('\n')
                 for user in display_user():
-                    print(f'{user.first_name} {user.last_name} .....{User.password}')
+                    print(f'{user.first_name} {user.last_name} .....{user.user_name}')
                     print('\n')
             else:
                 print('\n')
