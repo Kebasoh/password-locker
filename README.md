@@ -20,7 +20,7 @@
 ## Technology Used
 - Python3.6
 ## BDD
- 1. cc - Creates a new account
+ 1. cu - Creates a new account
  2. lg - logs  in
  3. ex - Exit the ap
 The user will be met with the following commands while signing in:

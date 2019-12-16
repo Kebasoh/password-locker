@@ -63,7 +63,7 @@ def main():
             search_username = input()
             if check_existing_user(search_username):
                 search_user = find_user(search_username)
-                print(f"{search_user.first_name} {search_user.last_name}")
+                print(f"{search_user.username} {search_user.last_name}")
                 print("-"*30)
                 print(f"username.......{search_user.username}")
                 print(f"password.......{search_user.password}")
