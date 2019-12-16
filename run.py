@@ -30,7 +30,7 @@ def main():
     print(f"Hello {user_name}. What would you like to do?")
     print('\n')
     while True:
-        print("Use these short codes: cu - create a new user, dc - display user, del - delete user, cp - copy password, fp - find a password, ex - exit the user list ")
+        print("Use these short codes: cu - create a new user, du - display user, del - delete user, cp - copy password, fp - find a password, ex - exit the user list ")
         short_code = input().lower().strip()
         if short_code == 'cu':
             print('New User')
@@ -52,7 +52,7 @@ def main():
                 print('Here is a list of all your users')
                 print('\n')
                 for user in display_user():
-                    print(f'{user.first_name} {user.last_name} .....{User.phone_number}')
+                    print(f'{user.first_name} {user.last_name} .....{User.password}')
                     print('\n')
             else:
                 print('\n')
