@@ -52,7 +52,7 @@ def main():
                 print('Here is a list of all your users')
                 print('\n')
                 for user in display_user():
-                    print(f'{user.first_name} {user.last_name} .....{user.user_name}')
+                    print(f'{user.first_name} {user.last_name}')
                     print('\n')
             else:
                 print('\n')

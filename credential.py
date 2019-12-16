@@ -1,49 +1,52 @@
-import pyperclip
 class Credential:
-   
+    """
+    Class that generates new instances of users.
+    """
     credential_list = []
 
-    def __init__(self,accout_name,password,):
-
-    
-
-        self.account_name = accout_name
+    def __init__(self,credential_name,usr_name,password,email):
+        self.credential_name = credential_name
+        self.usr_name = usr_name
         self.password = password
-       
-        
-    credential_list = []
+        self.email = email    
+
     def save_credential(self):
 
-       
+      
 
-        Credential.user_list.append(self)
+        Credential.credential_list.append(self)    
+
+
     def delete_credential(self):
-    
-       
 
-        Credential.credential_list.remove(self)
+        '''
+        delete_credentials method deletes a saved credentials from the credentials_list
+        '''
+
+        Credential.credentials_list.remove(self)   
+
+
     @classmethod
-    def find_by_account_name(cls,account_name):
-       
-
+    def find_by_name(cls,name):
         for credential in cls.credential_list:
-            if credential.account_name == account_name:
-                return account_name
+            if credential.credential_name == name:
+                return credential  
+
+
     @classmethod
-    def credential_exist(cls,account_name):
+    def credential_exist(cls,name):
        
         for credential in cls.credential_list:
-            if credential.account_name == account_name:
-                    return True
+            if credential.password == name:
+                    return credential
 
-        return False
+        return False      
+
+
     @classmethod
-    def display_account_name(cls):
-       
-        return cls.credential_list
-    
-    @classmethod
-    def copy_password(cls,password):
-        credential_found = Credential.find_by_password(password)
-        pyperclip.copy(credential_found.password)
-    
+    def display_credential(cls):  
+        '''
+        method that returns the credentials list
+        '''
+        return cls.credential_list            
+                      
