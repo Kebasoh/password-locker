@@ -4,11 +4,11 @@ class Credential:
     """
     credential_list = []
 
-    def __init__(self,credential_name,usr_name,password,email):
+    def __init__(self,credential_name,usr_name,password):
         self.credential_name = credential_name
         self.usr_name = usr_name
         self.password = password
-        self.email = email    
+         
 
     def save_credential(self):
 
@@ -19,9 +19,7 @@ class Credential:
 
     def delete_credential(self):
 
-        '''
-        delete_credentials method deletes a saved credentials from the credentials_list
-        '''
+      
 
         Credential.credentials_list.remove(self)   
 
@@ -45,8 +43,6 @@ class Credential:
 
     @classmethod
     def display_credential(cls):  
-        '''
-        method that returns the credentials list
-        '''
+       
         return cls.credential_list            
                       
