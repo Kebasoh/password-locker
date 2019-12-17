@@ -8,7 +8,7 @@ class Credential:
         self.credential_name = credential_name
         self.usr_name = usr_name
         self.password = password
-         
+        self.email = email
 
     def save_credential(self):
 

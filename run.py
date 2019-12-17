@@ -3,81 +3,57 @@ from user import User
 from credential import Credential
 
 def create_user(account_name,user_name,password,email):
-    '''
-    Function to create a new account
-    '''
+   
     new_user = User(account_name,user_name,password,email)
     return new_user
 
 def save_user(user):
-    '''
-    Function to save account
-    '''
+    
     user.save_user()    
 
 def del_user(user):
-    '''
-    Function to delete a account
-    '''
+    
     user.delete_user()    
 
 
 def find_user(name):
-    '''
-    Function that finds a account by name and returns the account
-    '''
-    return User.find_by_name(name)    
+    
+    return User.find_by_username(name)    
 
 def check_existing_user(name):
-    '''
-    Function that check if an account exists with that name and return a Boolean
-    '''
+    
     return User.user_exist(name)    
 
 def display_user():
-    '''
-    Function that returns all the saved accounts
-    '''
+    
     return User.display_user()  
- #_________________________________________CREDENTIALS____________________________________________________________________
+ 
 
 
 def create_credential(credential_name,usr_name,password,email):
-    '''
-    Function to create a new account
-    '''
+    
     new_credential = Credential(credential_name,usr_name,password,email)
     return new_credential
 
 def save_credential(credential):
-    '''
-    Function to save account
-    '''
+   
     credential.save_credential()    
 
 def del_credential(credential):
-    '''
-    Function to delete a account
-    '''
+   
     credential.delete_credential()    
 
 
 def find_credential(name):
-    '''
-    Function that finds a account by name and returns the account
-    '''
+    
     return Credential.find_by_name(name)    
 
 def check_existing_credential(name):
-    '''
-    Function that check if an account exists with that name and return a Boolean
-    '''
+   
     return Credential.credential_exist(name)    
 
 def display_credential():  
-    '''
-    Function that returns all the saved accounts
-    '''
+    
     return Credential.display_credential() 
 
 
