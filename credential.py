@@ -4,7 +4,7 @@ class Credential:
     """
     credential_list = []
 
-    def __init__(self,credential_name,usr_name,password):
+    def __init__(self,credential_name,usr_name,password,email):
         self.credential_name = credential_name
         self.usr_name = usr_name
         self.password = password
@@ -21,7 +21,7 @@ class Credential:
 
       
 
-        Credential.credentials_list.remove(self)   
+        Credential.credential_list.remove(self)   
 
 
     @classmethod

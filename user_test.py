@@ -15,7 +15,7 @@ class TestUser(unittest.TestCase):
           
         self.assertEqual(self.new_user.first_name,"Steve")
         self.assertEqual(self.new_user.last_name,"Kebaso")
-        self.assertEqual(self.new_user.username,"kebasoh")
+        self.assertEqual(self.new_user.user_name,"kebasoh")
         self.assertEqual(self.new_user.password,"steve254")
      
                
@@ -51,9 +51,9 @@ class TestUser(unittest.TestCase):
          test_user = User("Facebook","steve","kebasoh","steve254")
          test_user.save_user()
 
-         found_user = User.find_by_username("kebasoh")
+         found_user = User.find_by_user_name("kebasoh")
 
-         self.assertEqual(found_user.username,test_user.username)
+         self.assertEqual(found_user.user_name,test_user.user_name)
      def test_user_exists(self):
          
 

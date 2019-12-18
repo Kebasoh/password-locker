@@ -9,7 +9,7 @@ class User:
 
         self.first_name = first_name
         self.last_name = last_name
-        self.username = user_name
+        self.user_name = user_name
         self.password = password
         
     user_list = []
@@ -24,22 +24,22 @@ class User:
 
         User.user_list.remove(self)
     @classmethod
-    def find_by_username(cls,username):
+    def find_by_user_name(cls,user_name):
        
 
         for user in cls.user_list:
-            if user.username == username:
-                return username
+            if user.user_name == user_name:
+                return user_name
     @classmethod
-    def user_exist(cls,username):
+    def user_exist(cls,user_name):
        
         for user in cls.user_list:
-            if user.username == username:
+            if user.user_name == user_name:
                     return True
 
         return False
     @classmethod
-    def display_username(cls):
+    def display_user_name(cls):
        
         return cls.user_list
     

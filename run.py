@@ -18,7 +18,7 @@ def del_user(user):
 
 def find_user(name):
     
-    return User.find_by_username(name)    
+    return User.find_by_user_name(name)    
 
 def check_existing_user(name):
     
@@ -26,7 +26,7 @@ def check_existing_user(name):
 
 def display_user():
     
-    return User.display_user()  
+    return User.display_user_name()  
  
 
 
@@ -77,7 +77,7 @@ def main():
             pwd = input('Password : ')
             print ('\n')
             e_address = input('Email address:')
-            save_user(create_user(account_name,u_name,pwd,e_address)) 
+            save_user(create_user(account_name,user_name,pwd,e_address)) 
             print ('\n')
             print(f"A New {account_name} Account with the user name  {u_name} has been created.")
             print(f"You can now login to your {account_name} account using your password.")
@@ -87,7 +87,7 @@ def main():
                  print("Here is your account and your details")
                  print('\n')
                  for user in display_user():
-                     print(f"Account name:{user.account_name}  User name: {user.user_name} Password:{user.password}")
+                     print(f"Account name:{user.user_name}  User name: {user.user_name} Password:{user.password}")
                      print('\n')
              else:
                  print('\n')
