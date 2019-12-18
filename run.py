@@ -118,7 +118,7 @@ def main():
                         print('\n')
                         print('*' * 20)
                         pwd = input(f"{credential_name} password:")
-                        save_credential(create_credential(credential_name,u_name,pwd,e_address))
+                        save_credential(create_credential(credential_name,usr_name,pwd,e_address))
                         print('\n')
                         print(f"A New {credential_name} Account with the user name  {usr_name} has been created.")
                         print ('\n')
